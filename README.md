@@ -42,7 +42,7 @@ The project is mainly about showcasing the data exploration, manipulation and an
 
 > SQL Skills 
 
-`Joins` | `CTE's` | `Temp Tables` | `Windows Functions` | `Aggregate Functions` | `Creating Views` | `Converting Data Types`
+`Joins` | `CTE's` | `Temp Tables` | `Windows Functions` | `Aggregate Functions` | `Creating Views` | `STORED PROCEDURES` | `TYPE CASTING`
 
 ## Dataset
 The data used in this project is publically available at this [link](https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&time=2020-03-01..latest&facet=none&pickerSort=desc&pickerMetric=total_deaths&hideControls=true&Metric=Confirmed+deaths&Interval=7-day+rolling+average&Relative+to+Population=true&Color+by+test+positivity=false&country=IND~USA~GBR~CAN~DEU~FRA) and can be downloaded in csv format.
@@ -138,10 +138,11 @@ GROUP BY location) x;
 
 ```
 Subcontinent-Covid-Death-Exploration-Sql
-├── Excel Data
+├── Data Files
 │   ├── CovidDeaths.xlsx
 │   └── CovidVaccinations.xlsx
-└── README.md
+├── README.md
+└── Subcontinent Covid19 Analysis Queries.sql
 ```
 ---
 ## Contribution Guidelines
