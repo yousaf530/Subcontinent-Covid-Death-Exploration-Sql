@@ -30,6 +30,7 @@
   - [Overview](#overview)
     - [Dataset](#dataset)
     - [Tech Stack](#tech-stack)
+    - [Insights](#insights)
   - [Contribution Guidelines](#contribution-guidelines)
   - [Feedback](#feedback)
   - [Author Info](#author-info)
@@ -63,6 +64,38 @@ The list of countries included in the analysis is given below:
 ## Tech Stack
 - Microsoft SQL Server 2019 (RTM) - 15.0.2000.5 (X64)
 - SQL Server Management Studio v18.12.1
+
+
+## Insights
+<br/>
+<details>
+  <summary>Max Death Percentage for each Subcontinent Country</summary>
+
+  > Result
+
+  <img src="https://user-images.githubusercontent.com/45168689/177030245-da71e7e4-4289-4b1c-a192-fbcee4b20a74.png"/>
+
+   > Query
+
+    ```
+    SELECT location as 'Location',MAX(total_cases) as 'TotalCases', MAX(total_deaths) as 'TotalDeaths', MAX(ROUND(((total_deaths/total_cases) * 100),2)) as 'MaxDeathPercentage'
+    FROM CovidDeaths
+    WHERE location IN ('India', 'Pakistan', 'Bhutan','Maldives','Sri Lanka','Nepal','Bangladesh')
+    GROUP BY location
+    ORDER BY 4 DESC;
+    ```
+</details>
+
+<details>
+  <summary>Max Death Percentage for each Subcontinent Country</summary>
+  
+  ## Heading
+  1. A numbered
+  2. list
+     * With some
+     * Sub bullets
+</details>
+
 ---
 
 ## Project Structure
