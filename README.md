@@ -19,7 +19,7 @@
     ·
     <a href="https://github.com/yousaf530/Subcontinent-Covid-Death-Exploration-Sql/issues">Report Bug</a>
     ·
-    <a href="https://github.com/yousaf530">Request Specific Query</a>
+    <a href="https://github.com/yousaf530/Subcontinent-Covid-Death-Exploration-Sql/blob/main/Subcontinent%20Covid19%20Analysis%20Queries.sql">View Queries</a>
   </p>
 </div>
 
@@ -29,6 +29,7 @@
 
   - [Overview](#overview)
     - [Dataset](#dataset)
+    - [Get Started](#get-started)
     - [Tech Stack](#tech-stack)
     - [Insights](#insights)
   - [Contribution Guidelines](#contribution-guidelines)
@@ -60,6 +61,10 @@ The list of countries included in the analysis is given below:
   <li>Pakistan</li>
 </ol>
 
+## Get Started
+To get the database on your system and test and run the queries, you will need to have SQL Server and SSMS installed on your system. Then you can follow these steps:
+- Import the Excel files in the Excel Data folder into the SSMS using the process mentioned [here](https://docs.microsoft.com/en-us/sql/relational-databases/import-export/import-data-from-excel-to-sql?view=sql-server-ver16)
+- Open the `Subcontinent Covid19 Analysis Queries.sql` file in SSMS and run the queries in the given sequence.
 
 ## Tech Stack
 - Microsoft SQL Server 2019 (RTM) - 15.0.2000.5 (X64)
