@@ -105,7 +105,7 @@ The list of countries included in the analysis is given below:
 
 <details>
   <summary>Comparison Death Ratio Subcontinent vs Rest of Asia</summary>
-****
+
   > Result
 
   <img src="https://user-images.githubusercontent.com/45168689/177031737-3a929324-195f-49ff-bb36-bb952990fb32.png"/>
