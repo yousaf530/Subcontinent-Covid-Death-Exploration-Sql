@@ -40,6 +40,7 @@
 The project is mainly about showcasing the data exploration, manipulation and analytical capabilities using SQL. Following SQL skills are used for writing queries for the exploration and analysis of provided COVID19 dataset specifically for Subcontinent countries.
 
 > SQL Skills 
+
 `Joins` | `CTE's` | `Temp Tables` | `Windows Functions` | `Aggregate Functions` | `Creating Views` | `Converting Data Types`
 
 ## Dataset
