@@ -59,7 +59,6 @@ The list of countries included in the analysis is given below:
   <li>Pakistan</li>
 </ol>
 
-<br/>
 
 ## Tech Stack
 - Microsoft SQL Server 2019 (RTM) - 15.0.2000.5 (X64)
@@ -67,7 +66,6 @@ The list of countries included in the analysis is given below:
 
 
 ## Insights
-<br/>
 <details>
   <summary>Max Death Percentage for each Subcontinent Country</summary>
 
@@ -87,14 +85,23 @@ The list of countries included in the analysis is given below:
 </details>
 
 <details>
-  <summary>Max Death Percentage for each Subcontinent Country</summary>
-  
-  ## Heading
-  1. A numbered
-  2. list
-     * With some
-     * Sub bullets
+  <summary>Max Cases/Infection Ratio for each Subcontinent Country</summary>
+
+  > Result
+
+  <img src="https://user-images.githubusercontent.com/45168689/177030551-5fef5a70-741c-470a-8160-5d0456396729.png"/>
+
+   > Query
+
+```
+   SELECT location as 'Location', MAX(total_cases) as 'TotalCases', Max(population) as 'TotalPopulation' ,MAX(ROUND(((total_cases/population) * 100),2)) as 'MaxPercentPopulationInfected'
+    FROM CovidDeaths
+    WHERE location IN ('India', 'Pakistan', 'Bhutan','Maldives','Sri Lanka','Nepal','Bangladesh')
+    GROUP BY location
+    ORDER BY 4 DESC;
+```
 </details>
+
 
 ---
 
