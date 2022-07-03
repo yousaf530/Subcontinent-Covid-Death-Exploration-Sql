@@ -77,13 +77,13 @@ The list of countries included in the analysis is given below:
 
    > Query
 
-    ```
+```
     SELECT location as 'Location',MAX(total_cases) as 'TotalCases', MAX(total_deaths) as 'TotalDeaths', MAX(ROUND(((total_deaths/total_cases) * 100),2)) as 'MaxDeathPercentage'
     FROM CovidDeaths
     WHERE location IN ('India', 'Pakistan', 'Bhutan','Maldives','Sri Lanka','Nepal','Bangladesh')
     GROUP BY location
     ORDER BY 4 DESC;
-    ```
+```
 </details>
 
 <details>
