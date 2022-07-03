@@ -95,11 +95,40 @@ The list of countries included in the analysis is given below:
    > Query
 
 ```
-   SELECT location as 'Location', MAX(total_cases) as 'TotalCases', Max(population) as 'TotalPopulation' ,MAX(ROUND(((total_cases/population) * 100),2)) as 'MaxPercentPopulationInfected'
+    SELECT location as 'Location', MAX(total_cases) as 'TotalCases', Max(population) as 'TotalPopulation' ,MAX(ROUND(((total_cases/population) * 100),2)) as 'MaxPercentPopulationInfected'
     FROM CovidDeaths
     WHERE location IN ('India', 'Pakistan', 'Bhutan','Maldives','Sri Lanka','Nepal','Bangladesh')
     GROUP BY location
     ORDER BY 4 DESC;
+```
+</details>
+
+<details>
+  <summary>Comparison Death Ratio Subcontinent vs Rest of Asia</summary>
+****
+  > Result
+
+  <img src="https://user-images.githubusercontent.com/45168689/177031737-3a929324-195f-49ff-bb36-bb952990fb32.png"/>
+
+   > Query
+
+```
+   SELECT SUM(TotalCases) as 'TotalCases', SUM(TotalDeaths) as 'TotalDeaths', ROUND(((SUM(TotalDeaths))/SUM(TotalCases))*100,2) as 'DeathPercentageSubContCountries'
+	FROM (
+	SELECT MAX(total_cases) AS 'TotalCases', MAX(total_deaths) AS 'TotalDeaths' 
+	FROM CovidDeaths 
+	WHERE location IN ('India', 'Pakistan', 'Bhutan','Maldives','Sri Lanka','Nepal','Bangladesh')
+	GROUP BY location) x;
+
+```
+
+```
+	SELECT SUM(TotalCases) as 'TotalCases', SUM(TotalDeaths) as 'TotalDeaths', ROUND(((SUM(TotalDeaths))/SUM(TotalCases))*100,2) as 'DeathPercentageAsia'
+	FROM (
+	SELECT MAX(total_cases) AS 'TotalCases', MAX(total_deaths) AS 'TotalDeaths' 
+	FROM CovidDeaths 
+	WHERE continent = 'Asia' AND location NOT IN ('India', 'Pakistan', 'Bhutan','Maldives','Sri Lanka','Nepal','Bangladesh')
+	GROUP BY location) x;
 ```
 </details>
 
