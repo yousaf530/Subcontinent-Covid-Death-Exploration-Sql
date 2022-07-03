@@ -40,7 +40,7 @@
 The project is mainly about showcasing the data exploration, manipulation and analytical capabilities using SQL. Following SQL skills are used for writing queries for the exploration and analysis of provided COVID19 dataset specifically for Subcontinent countries.
 
 > SQL Skills 
-*  `Joins` | `CTE's` | `Temp Tables` | `Windows Functions` | `Aggregate Functions` | `Creating Views` | `Converting Data Types`
+`Joins` | `CTE's` | `Temp Tables` | `Windows Functions` | `Aggregate Functions` | `Creating Views` | `Converting Data Types`
 
 ## Dataset
 The data used in this project is publically available at this [link](https://ourworldindata.org/explorers/coronavirus-data-explorer?zoomToSelection=true&time=2020-03-01..latest&facet=none&pickerSort=desc&pickerMetric=total_deaths&hideControls=true&Metric=Confirmed+deaths&Interval=7-day+rolling+average&Relative+to+Population=true&Color+by+test+positivity=false&country=IND~USA~GBR~CAN~DEU~FRA) and can be downloaded in csv format.
